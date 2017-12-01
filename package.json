@@ -1,0 +1,28 @@
+{
+  "name": "countdown-plugin",
+  "version": "0.0.3",
+  "description": "countdown",
+  "main": "demo/countdown.min.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "server": "webpack-dev-server --config webpack.config.dev.js",
+    "build": "webpack -p --config webpack.config.prod.js"
+  },
+  "keywords": [
+    "countdown",
+    "js-plugin"
+  ],
+  "author": "yi_joy",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-core": "^6.24.1",
+    "babel-loader": "^7.0.0",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-react": "^6.24.1",
+    "clean-webpack-plugin": "^0.1.16",
+    "html-loader": "^0.4.5",
+    "html-webpack-plugin": "^2.28.0",
+    "webpack": "^2.6.1",
+    "webpack-dev-server": "^2.4.5"
+  }
+}
