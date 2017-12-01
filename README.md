@@ -6,7 +6,7 @@ countdown演示：**[demo](http://joy-yi0905.github.io/countdown/demo/demo.html)
 
 ### 如何使用
 
-- 首先，引入 `countdown.min.js`（这些文件包含在demo目录）
+- 首先，引入 `countdown.min.js`（该文件包含在demo目录）
 
 ```html
 <script src="countdown.min.js"></script>
