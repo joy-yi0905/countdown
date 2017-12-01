@@ -12,6 +12,22 @@ countdown演示：**[demo](http://joy-yi0905.github.io/countdown/demo/demo.html)
 <script src="countdown.min.js"></script>
 ```
 
+或者，你也可以使用模块的形式引入到代码中，只需要先安装它：
+
+```js
+> npm install countdown-plugin
+```
+
+再引入模块：
+
+```js
+// 普通引入
+var Countdown = require('countdown-plugin');
+
+// es6引入
+import Countdown from 'countdown-plugin'
+```
+
 - 然后，在页面里实例化它：
 
 ```js
