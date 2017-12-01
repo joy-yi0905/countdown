@@ -1,6 +1,6 @@
 {
   "name": "countdown-plugin",
-  "version": "0.0.3",
+  "version": "0.0.5",
   "description": "countdown",
   "main": "demo/countdown.min.js",
   "scripts": {
@@ -8,12 +8,19 @@
     "server": "webpack-dev-server --config webpack.config.dev.js",
     "build": "webpack -p --config webpack.config.prod.js"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/joy-yi0905/countdown.git"
+  },
   "keywords": [
     "countdown",
     "js-plugin"
   ],
   "author": "yi_joy",
   "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/joy-yi0905/countdown/issues"
+  },
   "devDependencies": {
     "babel-core": "^6.24.1",
     "babel-loader": "^7.0.0",
