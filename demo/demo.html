@@ -71,6 +71,18 @@ var c1 = new Countdown({
 
 c1.start();
 
+document.getElementById('btn1').onclick = function() {
+  if (c1.starting) {
+    c1.stop();
+    this.innerHTML = '继续1';
+  } else {
+    c1.start();
+    this.innerHTML = '暂停1';
+  }
+};
+
+
+
 var c2 = new Countdown({
   end: '2018/06/01',
   isFormat: true,
@@ -87,6 +99,17 @@ var c2 = new Countdown({
 });
 
 c2.start();
+
+document.getElementById('btn2').onclick = function() {
+  if (c2.starting) {
+    c2.stop();
+    this.innerHTML = '继续2';
+  } else {
+    c2.start();
+    this.innerHTML = '暂停2';
+  }
+};
+
 
 
 var c3 = new Countdown({
@@ -105,26 +128,6 @@ var c3 = new Countdown({
     document.getElementById('btn3').setAttribute('disabled', 'disabled');
   }
 });
-
-document.getElementById('btn1').onclick = function() {
-  if (c1.starting) {
-    c1.stop();
-    this.innerHTML = '继续1';
-  } else {
-    c1.start();
-    this.innerHTML = '暂停1';
-  }
-};
-
-document.getElementById('btn2').onclick = function() {
-  if (c2.starting) {
-    c2.stop();
-    this.innerHTML = '继续2';
-  } else {
-    c2.start();
-    this.innerHTML = '暂停2';
-  }
-};
 
 document.getElementById('btn3').onclick = function() {
   if (this.innerHTML === '开始10秒倒计时') {
