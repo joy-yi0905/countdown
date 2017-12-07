@@ -34,8 +34,8 @@ const defaults = {
 
 
 class Countdown {
-  constructor(params) {
-    this.params = extend(defaults, params || {});
+  constructor(params = {}) {
+    this.params = extend(defaults, params);
   }
 
   init() {

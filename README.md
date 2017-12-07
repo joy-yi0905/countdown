@@ -15,7 +15,7 @@ countdown演示：**[demo](http://joy-yi0905.github.io/countdown/demo/demo.html)
 或者，你也可以使用模块的形式引入到代码中，只需要先安装它：
 
 ```js
-> npm install countdown-plugin
+npm install countdown-plugin
 ```
 
 再引入模块：
@@ -31,11 +31,7 @@ import Countdown from 'countdown-plugin'
 - 然后，在页面里实例化它：
 
 ```js
-var c1 = new Countdown({
-  change: function(res) {
-    console.log(res);
-  }
-});
+var c1 = new Countdown();
 ```
 
 - 最后，通过 `start` 方法启动定时器：
