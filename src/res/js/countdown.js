@@ -1,7 +1,7 @@
 function extend(source, target) {
   for (let prop in source) {
     if (source.hasOwnProperty(prop)) {
-      if (!target[prop]) {
+      if (typeof target[prop] === 'undefined') {
         target[prop] = source[prop];
       }
     }
@@ -10,8 +10,10 @@ function extend(source, target) {
   return target;
 }
 
-function fillZero(str, n) {
-  while((str + '').length < n){
+function fillZero(str, n = 2) {
+  str = '' + str;
+
+  while(str.length < n){
     str = '0' + str;
   }
 
@@ -24,10 +26,10 @@ const defaults = {
   timestamp: 0,
   isFormat: false,
   isMilliSecond: false,
-  change: function(res) {
+  change(res) {
     console.log(res);
   },
-  over: function() {
+  over() {
     console.log('The countdown is over');
   }
 };
@@ -151,10 +153,10 @@ class Countdown {
 
       if (that.params.isFormat) {
         yyyy = fillZero(yyyy, 4);
-        dd = fillZero(dd, 2);
-        hh = fillZero(hh, 2);
-        mm = fillZero(mm, 2);
-        ss = fillZero(ss, 2);
+        dd = fillZero(dd);
+        hh = fillZero(hh);
+        mm = fillZero(mm);
+        ss = fillZero(ss);
       }
 
       result = {yyyy, dd, hh, mm, ss};
