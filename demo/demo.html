@@ -26,7 +26,7 @@
 <script type="text/javascript" src="countdown.min.js"></script></head>
 <body>
 
-<h3 class="title">默认</h3>
+<h3 class="title">默认（距离：2030/01/01）</h3>
 
 <div class="content-box">
   <div id="box1"></div>
@@ -36,7 +36,7 @@
 
 <hr>
 
-<h3 class="title">自定义：格式化 + 毫秒</h3>
+<h3 class="title">自定义：格式化 + 毫秒（距离：2018/06/01）</h3>
 
 <div class="content-box">
   <div id="box2"></div>
@@ -57,6 +57,7 @@
 
 <script>
 
+// 默认（距离：2030/01/01）
 var c1 = new Countdown({
   change: function(res) {
     var str = '', num = 0, type = '年天时分秒';
@@ -82,7 +83,7 @@ document.getElementById('btn1').onclick = function() {
 };
 
 
-
+// 自定义：格式化 + 毫秒（距离：2018/06/01）
 var c2 = new Countdown({
   end: '2018/06/01',
   isFormat: true,
@@ -111,7 +112,7 @@ document.getElementById('btn2').onclick = function() {
 };
 
 
-
+// 自定义：时间戳 - 10秒倒计时
 var c3 = new Countdown({
   isMilliSecond: true,
   timestamp: 10,
