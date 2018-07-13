@@ -30,7 +30,7 @@ module.exports = {
       {
         test: /\.(png|jpg|gif|eot|svg|ttf|woff)$/,
         loader: 'url-loader?limit=8192&name=images/[name].[ext]?[hash:8]'
-　　　 },
+      },
 
       {
         test: /\.html$/,

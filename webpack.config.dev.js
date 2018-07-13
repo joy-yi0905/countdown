@@ -27,7 +27,7 @@ module.exports = {
         test: /\.js$/,
         exclude: /node_modules/,
         loader: 'babel-loader',
-        query: {
+        query: {  
           presets: ['es2015'],
         }
       },
@@ -35,7 +35,7 @@ module.exports = {
       {
         test: /\.(png|jpg|gif|eot|svg|ttf|woff)$/,
         loader: 'url-loader?limit=8192&name=images/[name].[ext]?[hash:8]'
-　　　 },
+      },
 
       {
         test: /\.html$/,
