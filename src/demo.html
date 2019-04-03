@@ -36,7 +36,7 @@
 
 <hr>
 
-<h3 class="title">自定义：格式化 + 毫秒（距离：2019/01/01）</h3>
+<h3 class="title">自定义：格式化 + 毫秒（距离：2020/01/01）</h3>
 
 <div class="content-box">
   <div id="box2"></div>
@@ -59,7 +59,7 @@
 
 // 默认（距离：2030/01/01）
 var c1 = new Countdown({
-  change: function(res) {
+  change: function(res, elapsed) {
     var str = '', num = 0, type = '年天时分秒';
 
     for (var i in res) {
@@ -67,6 +67,7 @@ var c1 = new Countdown({
     }
 
     document.getElementById('box1').innerHTML = str;
+    console.log(res, elapsed)
   }
 });
 
@@ -83,9 +84,9 @@ document.getElementById('btn1').onclick = function() {
 };
 
 
-// 自定义：格式化 + 毫秒（距离：2019/01/01）
+// 自定义：格式化 + 毫秒（距离：2020/01/01）
 var c2 = new Countdown({
-  end: '2019/01/01',
+  end: '2020/01/01',
   isFormat: true,
   isMilliSecond: true,
   change: function(res) {

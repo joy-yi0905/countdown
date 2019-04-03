@@ -76,6 +76,10 @@ class Countdown {
       }
     }
 
+    if (!that.elapsed) {
+      that.elapsed = 0;
+    }
+
     const getRemain = (remain, type) => {
 
       switch(type) {
@@ -127,6 +131,7 @@ class Countdown {
     const calculateTime = () => {
 
       that.remain -= variable;
+      that.elapsed += variable;
 
       setTime();
 
@@ -137,8 +142,8 @@ class Countdown {
 
         if (that.params.isMilliSecond) result.ms = '00';
 
-        that.params.change && that.params.change(result);
-        return that.params.over && that.params.over();
+        that.params.change && that.params.change(result, that.elapsed);
+        that.params.over && that.params.over();
       }
     };
 
@@ -171,7 +176,7 @@ class Countdown {
 
       if (that.params.isMilliSecond) result.ms = ms;
 
-      that.params.change && that.params.change(result);
+      that.params.change && that.params.change(result, that.elapsed);
     };
 
     that.timer && clearInterval(that.timer);

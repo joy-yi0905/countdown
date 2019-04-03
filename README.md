@@ -2,7 +2,7 @@
 
 countdown 一个轻量级倒计时插件，不依赖任何框架。
 
-countdown演示：**[demo](http://joy-yi0905.github.io/countdown/demo/demo.html)**
+countdown演示：**[demo](http://yi-jy.github.io/countdown/demo/demo.html)**
 
 ### 如何使用
 

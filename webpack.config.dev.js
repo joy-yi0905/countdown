@@ -1,9 +1,6 @@
 var path = require('path');
 
-var webpack = require('webpack');
-
 var HtmlWebpackPlugin = require('html-webpack-plugin');
-var CleanWebpackPlugin = require('clean-webpack-plugin');
 
 module.exports = {
   entry: {
@@ -22,19 +19,31 @@ module.exports = {
   },
 
   module: {
-    loaders: [
+    rules: [
       {
         test: /\.js$/,
-        exclude: /node_modules/,
-        loader: 'babel-loader',
-        query: {  
-          presets: ['es2015'],
+        exclude: /(node_modules|bower_components)/,
+        use: {
+          loader: 'babel-loader',
+          options: {
+            presets: ['env']
+          }
         }
       },
 
       {
-        test: /\.(png|jpg|gif|eot|svg|ttf|woff)$/,
-        loader: 'url-loader?limit=8192&name=images/[name].[ext]?[hash:8]'
+        test: /\.(png|jpe?g|gif)$/,
+        use: [
+          {
+            loader: 'url-loader',
+            options: {
+              publicPath: 'images/', // 自定义 css文件 公用目录
+              outputPath: 'images/', // 文件存放目录
+              name: '[name].[ext]?[hash:8]',
+              limit: 8192
+            } 
+          }
+        ]
       },
 
       {
